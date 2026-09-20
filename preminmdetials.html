@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Premium Membership - MMR Cooking</title>
+  <link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    body {
+      background-color: #0d1117;
+      color: #e6edf3;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .checkout-card {
+      background: #161b22;
+      width: 100%;
+      max-width: 420px;
+      padding: 32px;
+      border-radius: 16px;
+      border: 1px solid #30363d;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    }
+
+    .plan-header {
+      text-align: center;
+      margin-bottom: 24px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #21262d;
+    }
+
+    .plan-badge {
+      display: inline-block;
+      background: linear-gradient(135deg, #6366f1, #8b5cf6);
+      color: #ffffff;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      padding: 4px 14px;
+      border-radius: 20px;
+      margin-bottom: 12px;
+    }
+
+    .plan-title {
+      font-size: 24px;
+      font-weight: 700;
+      color: #f0f6fc;
+      margin-bottom: 6px;
+    }
+
+    .plan-price {
+      font-size: 32px;
+      font-weight: 800;
+      color: #ffffff;
+    }
+
+    .plan-price span {
+      font-size: 14px;
+      font-weight: 400;
+      color: #8b949e;
+    }
+
+    .form-group {
+      margin-bottom: 18px;
+    }
+
+    .form-group-row {
+      display: flex;
+      gap: 12px;
+    }
+
+    label {
+      display: block;
+      font-size: 13px;
+      font-weight: 600;
+      color: #8b949e;
+      margin-bottom: 6px;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px;
+      background-color: #0d1117;
+      border: 1px solid #30363d;
+      border-radius: 8px;
+      font-size: 14px;
+      color: #f0f6fc;
+      outline: none;
+      transition: all 0.2s ease;
+    }
+
+    input::placeholder {
+      color: #484f58;
+    }
+
+    input:focus {
+      border-color: #6366f1;
+      box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+    }
+
+    .pay-btn {
+      width: 100%;
+      padding: 14px;
+      background: linear-gradient(135deg, #6366f1, #4f46e5);
+      color: #ffffff;
+      border: none;
+      border-radius: 8px;
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+      margin-top: 8px;
+      transition: opacity 0.2s ease, transform 0.1s ease;
+    }
+
+    .pay-btn:hover {
+      opacity: 0.95;
+    }
+
+    .pay-btn:active {
+      transform: scale(0.99);
+    }
+
+    .secure-note {
+      text-align: center;
+      font-size: 12px;
+      color: #6e7681;
+      margin-top: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="checkout-card">
+    <div class="plan-header">
+      <span class="plan-badge">Premium VIP</span>
+      <h2 class="plan-title">Upgrade Membership</h2>
+      <div class="plan-price">$29.99 <span>/ month</span></div>
+    </div>
+
+    <form action="#" method="POST" onsubmit="event.preventDefault();">
+      <div class="form-group">
+        <label for="card-name">Cardholder Name</label>
+        <input type="text" id="card-name" placeholder="MMR" required>
+      </div>
+
+      <div class="form-group">
+        <label for="card-number">Card Number</label>
+        <input type="text" id="card-number" placeholder="1234 5678 9012 3456" maxlength="19" required>
+      </div>
+
+      <div class="form-group-row">
+        <div class="form-group" style="flex: 1;">
+          <label for="expiry">Expiry Date</label>
+          <input type="text" id="expiry" placeholder="MM/YY" maxlength="5" required>
+        </div>
+
+        <div class="form-group" style="flex: 1;">
+          <label for="cvv">CVV</label>
+          <input type="password" id="cvv" placeholder="123" maxlength="4" required>
+        </div>
+      </div>
+      <a href="index.html" class="btn btn-primary" >Subscribe Now</a>
+      <p class="secure-note">🔒 Encrypted 256-bit Secure Payment</p>
+    </form>
+  </div>
+
+</body>
+</html>

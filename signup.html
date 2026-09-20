@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up - MMR Cooking</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0b0f12;
+  background: radial-gradient(circle at bottom center, #132420 0%, #090c0e 100%);
+  padding: 20px;
+}
+
+/* Main Dark Card */
+.login-card {
+  width: 100%;
+  max-width: 420px;
+  background-color: #121518;
+  border: 1px solid #23282e;
+  border-radius: 16px;
+  padding: 36px 30px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+}
+
+/* Header Text */
+.title {
+  color: #ffffff;
+  font-size: 22px;
+  font-weight: 800;
+  text-align: center;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  color: #8c96a3;
+  font-size: 13px;
+  text-align: center;
+  line-height: 1.4;
+  margin-bottom: 28px;
+}
+
+/* Form Fields */
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  display: block;
+  color: #e0e6ed;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.label-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.label-row label {
+  margin-bottom: 0;
+}
+
+.forgot-link {
+  color: #a0aec0;
+  font-size: 12px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.forgot-link:hover {
+  color: #ffffff;
+}
+
+/* Inputs */
+.input-group input {
+  width: 100%;
+  padding: 12px 14px;
+  background-color: #272c32;
+  border: 1px solid #363d46;
+  border-radius: 8px;
+  color: #ffffff;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.input-group input::placeholder {
+  color: #717d8a;
+}
+
+.input-group input:focus {
+  border-color: #6366f1;
+}
+
+/* Password Eye Button Inside Input */
+.password-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-wrapper input {
+  padding-right: 40px;
+}
+
+.eye-btn {
+  position: absolute;
+  right: 12px;
+  background: none;
+  border: none;
+  color: #8c96a3;
+  font-size: 15px;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.eye-btn:hover {
+  color: #ffffff;
+}
+
+/* Gradient Login Button */
+.login-btn {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  background: linear-gradient(90deg, #6366f1 0%, #4f46e5 100%);
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.1s;
+}
+
+.login-btn:hover {
+  opacity: 0.92;
+}
+
+.login-btn:active {
+  transform: scale(0.99);
+}
+
+/* Language Switcher */
+.language-dropdown {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 32px;
+  color: #a0aec0;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  width: fit-content;
+}
+
+.globe-icon {
+  color: #6366f1;
+  font-size: 15px;
+}
+
+.arrow-icon {
+  font-size: 10px;
+  color: #717d8a;
+}   
+</style>   
+</head>
+<body>
+
+  <div class="login-card">
+    <h1 class="title">CREATE ACCOUNT</h1>
+    <p class="subtitle">Join us today and get started with your new account</p>
+
+    <form action="#" method="POST">
+      
+      <!-- Full Name Input -->
+      <div class="input-group">
+        <label for="fullname">Full Name</label>
+        <input type="text" id="fullname" placeholder="Enter full name" required>
+      </div>
+
+      <!-- Email Input -->
+      <div class="input-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Enter email" required>
+      </div>
+
+      <!-- Password Input -->
+      <div class="input-group">
+        <label for="password">Password</label>
+        <div class="password-wrapper">
+          <input type="password" id="password" placeholder="Create password" required>
+          <button type="button" class="eye-btn" aria-label="Toggle password visibility">
+            <i class="fa-regular fa-eye"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Sign Up Button -->
+       <a href="index.html" class="login-btn">Sign Up</a>
+ 
+
+    </form>
+
+    <!-- Language Selector -->
+    <div class="language-dropdown">
+      <i class="fa-solid fa-globe globe-icon"></i>
+      <span>English</span>
+      <i class="fa-solid fa-chevron-down arrow-icon"></i>
+    </div>
+
+  </div>
+
+</body>
+</html>
